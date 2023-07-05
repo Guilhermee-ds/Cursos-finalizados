@@ -28,3 +28,5 @@ console.log("Quero ir apenas para o Rio de janeiro:");
 //caso queira pegar um elemento especifico
 console.log(listaDeDestinos[1]);
 
+console.log(listaDeDestinos[2]);
+

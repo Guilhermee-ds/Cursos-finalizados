@@ -6,15 +6,18 @@ const listaDeDestinos = new Array(
     "Rio de janeiro"
 );
 
-const idadeComprador = 20;
+const idadeComprador = 2;
+const estaAcompanhado = false;
 
 
-
-if (idadeComprador >=18){
+if (idadeComprador >= 18){
     console.log("voce pode viajar:");
     listaDeDestinos.splice(1,1); // removendo item
-} else {
-    console.log("voce nao pode viajar:");
+} else if(estaAcompanhado) {
+    console.log("pode viajar:");
+}else {
+    console.log("voce é não tem a idade necessaria e não está Acompanhado");
+
 }
 
 console.log(listaDeDestinos);

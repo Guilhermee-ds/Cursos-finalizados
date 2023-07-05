@@ -7,14 +7,14 @@ const listaDeDestinos = new Array(
 );
 
 const idadeComprador = 2;
-const estaAcompanhado = false;
+const estaAcompanhado = true;
 
 
 if (idadeComprador >= 18){
     console.log("voce pode viajar:");
     listaDeDestinos.splice(1,1); // removendo item
 } else if(estaAcompanhado) {
-    console.log("pode viajar:");
+    console.log("voce é menor de idade porem esta Acompanhado, pode viajar:");
 }else {
     console.log("voce é não tem a idade necessaria e não está Acompanhado");
 

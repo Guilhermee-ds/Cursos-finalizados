@@ -12,14 +12,16 @@ const cliente2 = new Cliente();
 
 const ContaCorrenteRicardo = new ContaCorrente();
 ContaCorrenteRicardo.agencia = 1001;
-console.log (ContaCorrenteRicardo.saldo);
-
-ContaCorrenteRicardo.depositar(1000);
-console.log (ContaCorrenteRicardo.saldo);
-const valorSacado = ContaCorrenteRicardo.sacar(100);
-console.log (valorSacado);
+ContaCorrenteRicardo.cliente = cliente1;
+ContaCorrenteRicardo.depositar (500);
 
 
+const conta2 = new ContaCorrente();
+conta2.cliente = cliente2;
+conta2.agencia = 102;
 
+ContaCorrenteRicardo.transferir(200, conta2);
 
-console.log (ContaCorrenteRicardo);
+console.log(conta2);
+console.log(ContaCorrenteRicardo);
+

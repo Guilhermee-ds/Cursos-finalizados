@@ -11,11 +11,17 @@ export class ContaCorrente{
         
     };
 
-    depositar(valor){
+    depositar(valor)
+    {
         if(valor <= 0 ){
             return
         }
             this._saldo += valor;
             
-        }
+    }
+    
+    transferir(vlor, conta){
+        const ValorSacado = this.sacar(vlor);
+        conta.depositar (ValorSacado);
+    }
 };

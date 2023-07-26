@@ -1,5 +1,7 @@
 <?php
 
+use Faker\Core\Number;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +26,12 @@ Route::get('/',[\App\Http\Controllers\PrincipalController::class,'principal']);;
 Route::get('/sobreNos',[\App\Http\Controllers\SobreNosController::class,'sobreNos']);;
 
 Route::get('/contato',[\App\Http\Controllers\ContatoController::class,'contato']);;
+//nome, categotia, assunto, mensagem
+
+
+Route::get('/contato/{name}/{category}/{subject}/{message}/{date?}', 
+    function (string $name,string $category, string $subject, string $message, string $date ="message not found"){
+    echo "Estamos aqui:.$name - $category - $subject - $message - $date";
+
+    }
+);

@@ -41,5 +41,14 @@ Route::prefix('/app')->group(function (){
 });
 
 
-//nome, categotia, assunto, mensagem
+Route::get('/rota1', function (){
+    echo "Rota principal";
+})->name('site.rota1');
+
+
+ Route::get('/rota2', function (){
+    return redirect()->route('site.rota1');
+})->name('site.rota2');
+
+//Route::redirect('/rota2','rota1');
 

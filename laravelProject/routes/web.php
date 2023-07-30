@@ -41,16 +41,8 @@ Route::prefix('/app')->group(function (){
 });
 
 
-Route::get('/rota1', function (){
-    echo "Rota principal";
-})->name('site.rota1');
+Route::get('/teste/{p2}/{p1}',[\App\Http\Controllers\TesteController::class,'teste']) -> name('teste');
 
-
- Route::get('/rota2', function (){
-    return redirect()->route('site.rota1');
-})->name('site.rota2');
-
-//Route::redirect('/rota2','rota1');
 
 
 Route::fallback(function (){

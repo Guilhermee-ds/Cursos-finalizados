@@ -31,11 +31,13 @@ Route::get('/contato',[\App\Http\Controllers\ContatoController::class,'contato']
 
 Route::get('/login',[\App\Http\Controllers\LoginController::class,'login']);;
 
-Route::get('/clientes',[\App\Http\Controllers\ClientesController::class,'clientes']);;
+Route::prefix('/app')->group(function (){
+    Route::get('/clientes',[\App\Http\Controllers\ClientesController::class,'clientes']);
 
-Route::get('/fornecedores',[\App\Http\Controllers\FornecedoresController::class,'fornecedores']);;
-
-Route::get('/produtos',[\App\Http\Controllers\ProdutosController::class,'produtos']);;
+    Route::get('/fornecedores',[\App\Http\Controllers\FornecedoresController::class,'fornecedores']);
+    
+    Route::get('/produtos',[\App\Http\Controllers\ProdutosController::class,'produtos']);
+});
 
 
 //nome, categotia, assunto, mensagem

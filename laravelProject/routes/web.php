@@ -38,4 +38,4 @@ Route::get('/contato/{name}/{category_id}',
     echo "Estamos aqui:.$name - $category_id ";
 
     }
-);
+) -> where('category_id','[0-9]+') -> where('name','[A-Za-z]+');

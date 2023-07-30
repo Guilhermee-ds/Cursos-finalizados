@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class FornecedoresController extends Controller
 {
-    public function fornecedores() {
-        return view('site.fornecedores');
+    public function index() {
+        return view('site.app.fornecedores.index');
     }
 }

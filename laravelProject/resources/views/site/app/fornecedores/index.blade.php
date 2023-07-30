@@ -7,5 +7,12 @@
 </head>
 <body>
     <h1>Welcome to page Fornecedores</h1>
+
+
+    {{-- ola--}}
+
+    @php
+        echo "teste php";
+    @endphp
 </body>
 </html>

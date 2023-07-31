@@ -8,11 +8,20 @@
 <body>
     <h1>Welcome to page Fornecedores</h1>
 
-
-    {{-- ola--}}
-
     @php
         echo "teste php";
     @endphp
+
+
+    @if (count($fornecedores)> 0 && count($fornecedores) < 10)
+        <h2>Existem Fornecedores</h2>
+
+    @elseif (count($fornecedores) >= 10)
+    <h2>existem varios fornecedores cadastrados</h2>
+
+    @else
+    <h2>ainda nao existe fornecedores</h2>
+    @endif
+
 </body>
 </html>

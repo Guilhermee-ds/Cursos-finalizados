@@ -9,19 +9,26 @@
     <h1>Welcome to page Fornecedores</h1>
 
     @php
-        echo "teste php";
+       // echo "teste php";
     @endphp
 
+    {{--@dd($fornecedores):--}}
+    {{-- @unlesss executa se o retorno for falso --}}
 
-    @if (count($fornecedores)> 0 && count($fornecedores) < 10)
-        <h2>Existem Fornecedores</h2>
-
-    @elseif (count($fornecedores) >= 10)
-    <h2>existem varios fornecedores cadastrados</h2>
-
-    @else
-    <h2>ainda nao existe fornecedores</h2>
+    Fornecedores: {{$fornecedores [0]['nome']}}
+    <br>
+    Status: {{$fornecedores [0]['status']}}
+    <br>
+    @if ($fornecedores[0]['status'] == 'N')
+        Fornecedor inativo
     @endif
+    <br>
+    @unless (($fornecedores[0]['status'] == 'S')) <!-- Se o retorno for falso -->
+        Fornecedor inativo - Metodo Unlesss
+    @endunless
+    <br>
+
+
 
 </body>
 </html>

@@ -18,17 +18,31 @@
 
 
     @isset($fornecedores)
-        Fornecedores: {{$fornecedores [1]['nome']}}
+        Fornecedores: {{$fornecedores [2]['nome']}}
         <br>
-        Status: {{$fornecedores [1]['status']}}
+        Status: {{$fornecedores [2]['status']}}
         <br>
-        CNPJ: {{$fornecedores [1]['cnpj'] ?? 'Dado não foi preencido'}}
+        CNPJ: {{$fornecedores [2]['cnpj'] ?? 'Dado não foi preencido'}}
+        <br>
+        Telefone: ({{$fornecedores[2]['ddd'] ?? ''}}) {{$fornecedores[1]['telefone'] ?? ''}}
+        @switch($fornecedores[2]['ddd'])
+            @case('11')
+                São Paulo - SP
+            @break
 
+            @case('32')
+                Juiz de Fora - MG
+            @break
 
-        <!--$variavel testada não estiver definida  (isset)*!
-            ou
-            $variavel testada possuir o valor null
-        -->
+            @case('85')
+                Fortaleza - CE
+            @break
+
+            @default
+                Estado não indentificado
+
+        @endswitch
+
     @endisset
 
     <br>

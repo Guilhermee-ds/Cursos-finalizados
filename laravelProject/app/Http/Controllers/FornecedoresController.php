@@ -19,6 +19,9 @@ class FornecedoresController extends Controller
             ],
         ];
 
+        $msg =  isset($fornecedores[0]['cnpj']) ? 'CNPJ informado': 'CNPJ não informado';
+        echo $msg;
+
         return view('site.app.fornecedores.index',compact('fornecedores'));
     }
 }

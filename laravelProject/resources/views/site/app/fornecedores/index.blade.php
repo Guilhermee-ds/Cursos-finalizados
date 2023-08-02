@@ -9,7 +9,7 @@
     <h1>Welcome to page Fornecedores</h1>
 
     @php
-     if(isset($variavel)) {} // retorna true se a variavel estiver definida
+     //if(empty($variavel)) {} // retorna true se a variavel estiver vazia
        // echo "teste php";
     @endphp
 
@@ -23,7 +23,10 @@
         Status: {{$fornecedores [0]['status']}}
         <br>
         @isset($fornecedores [0]['cnpj'])
-        CNPJ: {{$fornecedores [0]['cnpj']}}
+                CNPJ: {{$fornecedores [0]['cnpj']}}
+                @empty($fornecedores[0]['cnpj'])
+                    - Vazio
+                @endempty
         @endisset
 
     @endisset

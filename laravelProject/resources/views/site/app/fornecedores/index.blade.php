@@ -18,16 +18,19 @@
 
 
     @isset($fornecedores)
-        @for ($i = 0; isset($fornecedores[$i]); $i++)
-            Fornecedores: {{$fornecedores [2]['nome']}}
+
+        @php $i = 0 @endphp
+        @while(isset($fornecedores[$i]))
+            Fornecedores: {{$fornecedores [$i]['nome']}};
             <br>
-            Status: {{$fornecedores [$i]['status']}}
+            Status: {{$fornecedores [$i]['status']}};
             <br>
-            CNPJ: {{$fornecedores [$i]['cnpj'] ?? 'Dado não foi preencido'}}
+            CNPJ: {{$fornecedores [$i]['cnpj'] ?? 'Dado não foi preencido'}};
             <br>
-            Telefone: ({{$fornecedores[$i]['ddd'] ?? ''}}) {{$fornecedores[1]['telefone'] ?? ''}}
+            Telefone: ({{$fornecedores[$i]['ddd'] ?? ''}}) {{$fornecedores[1]['telefone'] ?? ''}};
             <hr>
-        @endfor
+            @php $i++ @endphp
+        @endwhile
     @endisset
 
 

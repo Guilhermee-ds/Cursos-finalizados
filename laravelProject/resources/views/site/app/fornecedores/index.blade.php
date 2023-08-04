@@ -21,13 +21,24 @@
 
 
         @forelse ($fornecedores as $indice => $fornecedor)
-            Fornecedores: @{{$fornecedor['nome']}};
+            Interação atual: {{$loop -> iteration}};
             <br>
-            Status: @{{$fornecedor['status']}};
+            Fornecedores: {{$fornecedor['nome']}};
             <br>
-            CNPJ: @{{$fornecedor['cnpj'] ?? 'Dado não foi preencido'}};
+            Status: {{$fornecedor['status']}};
             <br>
-            Telefone: (@{{$fornecedor['ddd'] ?? ''}}) {{$fornecedor['telefone'] ?? ''}};
+            CNPJ: {{$fornecedor['cnpj'] ?? 'Dado não foi preencido'}};
+            <br>
+            Telefone: ({{$fornecedor['ddd'] ?? ''}}) {{$fornecedor['telefone'] ?? ''}};
+            <br>
+            @if ($loop->first)
+                Primeira interação
+            @endif
+            @if ($loop->last)
+                Ultima interação
+                <br>
+                Total de registros: {{$loop->count}}
+            @endif
             <hr>
             @empty
                 Não existe fornecedores cadastrados

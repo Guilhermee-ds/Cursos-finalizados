@@ -21,13 +21,13 @@
 
 
         @forelse ($fornecedores as $indice => $fornecedor)
-            Fornecedores: {{$fornecedor['nome']}};
+            Fornecedores: @{{$fornecedor['nome']}};
             <br>
-            Status: {{$fornecedor['status']}};
+            Status: @{{$fornecedor['status']}};
             <br>
-            CNPJ: {{$fornecedor['cnpj'] ?? 'Dado não foi preencido'}};
+            CNPJ: @{{$fornecedor['cnpj'] ?? 'Dado não foi preencido'}};
             <br>
-            Telefone: ({{$fornecedor['ddd'] ?? ''}}) {{$fornecedor['telefone'] ?? ''}};
+            Telefone: (@{{$fornecedor['ddd'] ?? ''}}) {{$fornecedor['telefone'] ?? ''}};
             <hr>
             @empty
                 Não existe fornecedores cadastrados

@@ -26,7 +26,7 @@ Route::get('/', function () {
 //Rota principal
 Route::get('/',[\App\Http\Controllers\PrincipalController::class,'principal']) -> name('site.index');;
 
-Route::get('/sobreNos',[\App\Http\Controllers\SobreNosController::class,'sobreNos']) -> name('site.sobrenos');;
+Route::get('/sobre-nos',[\App\Http\Controllers\SobreNosController::class,'sobrenos']) -> name('site.sobrenos');;
 
 Route::get('/contato',[\App\Http\Controllers\ContatoController::class,'contato']) -> name('site.contato');;
 
@@ -38,7 +38,7 @@ Route::prefix('/app')->group(function (){
     Route::get('/clientes',[\App\Http\Controllers\ClientesController::class,'clientes']) -> name('app.clientes');
 
     Route::get('/fornecedores',[\App\Http\Controllers\FornecedoresController::class,'index']) -> name('app.fornecedores');
-    
+
     Route::get('/produtos',[\App\Http\Controllers\ProdutosController::class,'produtos']) -> name('app.produtos');
 });
 

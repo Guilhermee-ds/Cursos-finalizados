@@ -30,6 +30,8 @@ Route::get('/sobre-nos',[\App\Http\Controllers\SobreNosController::class,'sobren
 
 Route::get('/contato',[\App\Http\Controllers\ContatoController::class,'contato']) -> name('site.contato');;
 
+Route::post('/contato',[\App\Http\Controllers\ContatoController::class,'contato']) -> name('site.contato');;
+
 Route::get('/login',[\App\Http\Controllers\LoginController::class,'login']) -> name('site.login');;
 
 

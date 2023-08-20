@@ -1,5 +1,5 @@
 /**
- * create and work arrays
+ * Accessing elements of an Array:
  */
 
 

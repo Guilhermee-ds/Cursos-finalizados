@@ -56,3 +56,7 @@ def game():
 
     print("End-Game")
     print("number correct is", number_secret)
+
+
+if __name__ == "__main__":  # execute  file
+    game()

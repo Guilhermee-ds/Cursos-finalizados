@@ -19,7 +19,6 @@ return new class extends Migration
             $table->float('price_sale',8, 2)->default(0.01);
             $table->integer('minimum_stock')->default(1);
             $table->integer('max_stock')->default(1);
-            $table->date('data_input')->default(today(1));
             $table->timestamps();
         });
     }

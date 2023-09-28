@@ -20,8 +20,9 @@ return new class extends Migration
             $table->float('height',8, 2);
             $table->timestamps();
 
-            //constraint -> references
+            //constraint -> references relacionament
             $table->foreign('product_id')->references('id')->on('produtos');
+            $table->unique('product_id');
         });
     }
 
